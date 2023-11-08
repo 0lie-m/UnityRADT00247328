@@ -9,8 +9,8 @@ public class dalek_control : MonoBehaviour
     Animator dalekAnimator;
     enum dalekState { Idle, Attack, Follow}
     dalekState currentlyIs = dalekState.Idle;
-    private float aggroRadius = 10;
-    private float walkingSpeed = 0.3f;
+    private float aggroRadius = 100;
+    private float walkingSpeed = 2f;
     private float meleeDistance = 1;
     // Start is called before the first frame update
     void Start()
