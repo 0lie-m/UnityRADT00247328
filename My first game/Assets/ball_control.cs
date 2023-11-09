@@ -5,9 +5,9 @@ using UnityEngine;
 public class ball_control : MonoBehaviour
 {
     Rigidbody rb;
-    float KickStrength = 2;
+    float KickStrength = 80;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody>();
     }
@@ -19,8 +19,9 @@ public class ball_control : MonoBehaviour
 
     }
 
-    void KickBall(Transform kicker)
+    public void KickBall(Transform kicker)
     {
+        rb.AddExplosionForce(KickStrength, kicker.position, 4);
         rb.AddForce(KickStrength * kicker.forward, ForceMode.Impulse);
     }
     private void OnCollisionEnter(Collision collision)
@@ -30,6 +31,12 @@ public class ball_control : MonoBehaviour
 
         else
         {
+            dalek_control testIfDalek =
+                collision.gameObject.GetComponent<dalek_control>();
+            if (testIfDalek != null)
+            {
+                testIfDalek.dieNOW();
+            }
             print("ouch");
 
             KickBall(collision.transform);
