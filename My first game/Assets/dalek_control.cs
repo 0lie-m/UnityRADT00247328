@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -59,5 +60,10 @@ public class dalek_control : MonoBehaviour
             dalekAnimator.SetBool("swimming", true);
         else
             dalekAnimator.SetBool("swimming", false);
+    }
+
+    internal void dieNOW()
+    {
+        throw new NotImplementedException();
     }
 }
