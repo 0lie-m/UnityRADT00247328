@@ -16,7 +16,7 @@ public class dalek_control : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dalekAnimator = GetComponent<Animator>();
+        dalekAnimator = GetComponentInChildren<Animator>();
         player = FindAnyObjectByType<cubeControl>();
         
         
@@ -30,7 +30,7 @@ public class dalek_control : MonoBehaviour
                 if (Vector3.Distance(player.transform.position, transform.position) < aggroRadius)
                 {
                     currentlyIs = dalekState.Follow;
-                    dalekAnimator.SetBool("isWalikng", true);
+                    dalekAnimator.SetBool("swimming", true);
 
                 }
                 break;

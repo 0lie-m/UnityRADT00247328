@@ -12,12 +12,12 @@ public class DalekManagerScript : MonoBehaviour
     {
         for (int i = 0; i < numberOfDaleks; i++)
         {
-            Vector3 positon = new Vector3
-                 (Random.Range(-40f, 40f),
+            Vector3 position = new Vector3(
+                 Random.Range(-40f, 40f),
                  5f,
                  Random.Range(-40f, 40f));
 
-            Instantiate(dalekControlTemplate, positon, Quaternion.identity );
+            Instantiate(dalekControlTemplate, position, Quaternion.identity );
         }
     }
 

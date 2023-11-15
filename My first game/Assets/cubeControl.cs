@@ -19,7 +19,7 @@ public class cubeControl : MonoBehaviour
             transform.Rotate(Vector3.up, 1000 * Time.deltaTime);
         if (Input.GetKey(KeyCode.D))
             transform.Rotate(Vector3.down, 1000 * Time.deltaTime);
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             Transform newBall = Instantiate(footballCloneTemplate, transform.position + 2* transform.forward,
                 Quaternion.identity);
