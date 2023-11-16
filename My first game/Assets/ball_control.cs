@@ -37,7 +37,7 @@ public class ball_control : MonoBehaviour
             {
                 testIfDalek.dieNOW();
             }
-            print("ouch");
+            print("ouch That hurt");
 
             KickBall(collision.transform);
         }

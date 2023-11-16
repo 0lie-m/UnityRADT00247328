@@ -15,14 +15,14 @@ public class enemyControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        {
+        
             if (Input.GetKey(KeyCode.UpArrow))
                 transform.position += transform.forward * Time.deltaTime;
             if (Input.GetKey(KeyCode.LeftArrow))
                 transform.Rotate(Vector3.up, 1000 * Time.deltaTime);
             if (Input.GetKey(KeyCode.RightArrow))
                 transform.Rotate(Vector3.down, 1000 * Time.deltaTime);
-            if (Input.GetKeyDown(KeyCode.L))
+            if (Input.GetKeyDown(KeyCode.P))
             {
                 Transform newBall = Instantiate(footballCloneTemplate, transform.position + 2 * transform.forward,
                     Quaternion.identity);
@@ -33,4 +33,4 @@ public class enemyControl : MonoBehaviour
             }
         }
     }
-}
+

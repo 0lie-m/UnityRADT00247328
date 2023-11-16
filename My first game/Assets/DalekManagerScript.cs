@@ -6,16 +6,16 @@ using UnityEngine;
 public class DalekManagerScript : MonoBehaviour
 {
     public Transform dalekControlTemplate;
-        int numberOfDaleks = 100;
+        int numberOfDaleks = 30;
     // Start is called before the first frame update
     void Start()
     {
         for (int i = 0; i < numberOfDaleks; i++)
         {
             Vector3 position = new Vector3(
-                 Random.Range(-40f, 40f),
+                 Random.Range(-80f, 80f),
                  5f,
-                 Random.Range(-40f, 40f));
+                 Random.Range(-80f, 80f));
 
             Instantiate(dalekControlTemplate, position, Quaternion.identity );
         }
